@@ -12,9 +12,9 @@ class RelatedItems extends DefaultPluginBootstrap {
  		elgg_extend_view('admin.css', 'related-items/admin', 1);
  		elgg_extend_view('elgg.css', 'related-items/css');
     
-    elgg_register_event_handler("action:validate", "plugins/settings/save", function(\Elgg\Hook $hook){
-      $params = $hook->getParams();
-      $return = $hook->getValue();
+    elgg_register_event_handler("action:validate", "plugins/settings/save", function(\Elgg\Event $event){
+      $params = $event->getParams();
+      $return = $event->getValue();
       
       $request = $params["request"];
       if($request->getParam('plugin_id') == "related-items") {

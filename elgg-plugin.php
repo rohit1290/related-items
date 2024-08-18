@@ -4,7 +4,7 @@ require_once __DIR__ . '/lib/related-items-lib.php';
 return [
 	'plugin' => [
 		'name' => 'Related Items',
-		'version' => '5.0',
+		'version' => '6.0',
 		'dependencies' => [],
 	],
 	'bootstrap' => RelatedItems::class,
