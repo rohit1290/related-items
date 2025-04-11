@@ -113,7 +113,7 @@ if (in_array($vars['entity']->getSubtype(), $renderto_subtypes)) {
 					echo "</a><br/>";
 				}
 				if ($show_names ==='yes') {
-					echo "<small>" . elgg_echo ('by') . ' ' . $owner->name . "</small>";
+					echo "<p class='small'>" . elgg_echo ('by') . ' ' . $owner->name . "</p>";
 				}
 
 				if ($show_dates ==='yes') {
@@ -122,7 +122,7 @@ if (in_array($vars['entity']->getSubtype(), $renderto_subtypes)) {
 					} else {
 						$time = elgg_view_friendly_time($related_item->time_created);
 					}
-					echo "<br/><small>" . $time . "</small>";
+					echo "<p class='small'>" . $time . "</p>";
 				}
 
 				if ($show_tags ==='yes') {
@@ -144,14 +144,14 @@ if (in_array($vars['entity']->getSubtype(), $renderto_subtypes)) {
 							$matched_tags[] = $tag_to_compare;
 						}
 					}
-					$tag_output = "<br/><small>";
+					$tag_output = "<p class='small'>";
 					$tag_output .= elgg_view('output/tags', ['value'=>$matched_tags]);
-					$tag_output .= "</small>";
+					$tag_output .= "</p>";
 					echo $tag_output;
 				}
 
 				if ($show_types === 'yes') {
-					echo "<div class='elgg-related-item-subtype'><small>" . $type_label . "</small></div>";
+					echo "<div class='elgg-related-item-subtype'><p class='small'>" . $type_label . "</p></div>";
 				}
 
 				echo "</div>";
