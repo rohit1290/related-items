@@ -109,7 +109,7 @@ if (in_array($vars['entity']->getSubtype(), $renderto_subtypes)) {
 
 								echo '<div class="elgg-related-item-title">';
 				if ($related_item->title) {
-					echo '<a href="' . $related_item->getURL() . '">' . elgg_get_excerpt($related_item->title, 100) . "</a>";
+					echo '<a href="' . $related_item->getURL() . '"><b>' . elgg_get_excerpt($related_item->title, 100) . "</b></a>";
 				}
 				if ($show_names ==='yes') {
 					echo "<p class='small'>" . elgg_echo ('by') . ' ' . $owner->name . "</p>";
