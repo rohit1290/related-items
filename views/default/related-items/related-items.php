@@ -48,7 +48,7 @@ if (in_array($vars['entity']->getSubtype(), $renderto_subtypes)) {
 				$owner = $related_item->getOwnerEntity();
 				$icon_url = '';
 				$icon = null;
-				$this_subtype = $related_item->getsubtype();
+				$this_subtype = $related_item->getSubtype();
 				echo '<div class="elgg-related-item elgg-related-' . $this_subtype .'" onclick="location.href=\''. $related_item->getURL() . '\';" style="width:' . $width . '%;">';
 
 				if ($show_icons ==='yes') {
@@ -62,7 +62,7 @@ if (in_array($vars['entity']->getSubtype(), $renderto_subtypes)) {
 						{
 							$cover_guid = $related_item->getCoverImageGuid();
 							$album_cover = get_entity($cover_guid);
-							if ($album_cover->getSubtype === 'image') {
+							if ($album_cover->getSubtype() === 'image') {
 									$icon_url = $elgg_path . "photos/thumbnail/" . $cover_guid . "/small/";
 									break;
 							}
