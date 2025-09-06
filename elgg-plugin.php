@@ -7,7 +7,7 @@ return [
 		'version' => '6.0',
 		'dependencies' => [],
 	],
-	'bootstrap' => RelatedItems::class,
+	'bootstrap' => RelatedItems\Bootstrap::class,
 	'routes' => [
 		'collection:object:related' => [
 			'path' => '/related/{guid}',

@@ -44,7 +44,7 @@ if (in_array($vars['entity']->getSubtype(), $renderto_subtypes)) {
 		echo '<div class="elgg-related-items-list">';
 
 		foreach ($related_items as $related_item) {
-			if ($related_item instanceof ElggObject) { // ensure the item is not a group or other object type
+			if ($related_item && $related_item->getType() === 'object') { // ensure the item is not a group or other object type
 				$owner = $related_item->getOwnerEntity();
 				$icon_url = '';
 				$icon = null;

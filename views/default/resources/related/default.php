@@ -1,7 +1,7 @@
 <?php
 $page = elgg_extract('guid', $vars);
 $entity = get_entity($page);
-if ($entity instanceof ElggObject) {
+if ($entity && $entity->getType() === 'object') {
 	$subtype = $entity->getSubtype();
 	$container = $entity->getContainerEntity();
 	$group = $entity->getContainerEntity();
@@ -88,5 +88,3 @@ if ($entity instanceof ElggObject) {
 
 	echo elgg_view_page($title, $layout);
 }
-
-	

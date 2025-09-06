@@ -1,7 +1,8 @@
 <?php
+namespace RelatedItems;
 use Elgg\DefaultPluginBootstrap;
 
-class RelatedItems extends DefaultPluginBootstrap {
+class Bootstrap extends DefaultPluginBootstrap {
 
   public function init() {
   	$comment_position = elgg_get_plugin_setting('comment_position', 'related-items');
