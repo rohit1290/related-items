@@ -14,7 +14,7 @@ if ($entity && $entity->getType() === 'object') {
 			$group = get_entity($container->container_guid);
 			break;
 		}
-		case 'page_top':
+		case 'page':
 		{
 			elgg_push_breadcrumb(elgg_echo('pages'), 'pages/all');
 			$subtype = 'pages';
@@ -39,11 +39,6 @@ if ($entity && $entity->getType() === 'object') {
 		case 'blog':
 		{
 			elgg_push_breadcrumb(elgg_echo('blog'), 'blog/all');
-			break;
-		}
-		case 'au_set':
-		{
-			elgg_push_breadcrumb(elgg_echo('au_set'), 'pinboards/all');
 			break;
 		}
 		default:

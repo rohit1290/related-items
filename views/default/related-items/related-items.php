@@ -1,8 +1,4 @@
 <?php
-/*
- * elgg - related-items: view related items
- */
-
 $renderto_subtypes = array_filter(explode(',', elgg_get_plugin_setting('renderto_subtypes', 'related-items')));
 if (in_array($vars['entity']->getSubtype(), $renderto_subtypes)) {
 	$max_related_items = elgg_get_plugin_setting('max_items', 'related-items');
@@ -70,7 +66,6 @@ if (in_array($vars['entity']->getSubtype(), $renderto_subtypes)) {
 						case 'bookmarks':
 						case 'videolist_item':
 						case 'izap_videos':
-						case 'au_set':
 						{
 							$icon_url = $related_item->getIconURL('small');
 							$icon_url = $icon_url ?: '';
