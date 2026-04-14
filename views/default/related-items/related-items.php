@@ -100,7 +100,7 @@ if (in_array($vars['entity']->getSubtype(), $renderto_subtypes)) {
 					$img = "<div class=\"elgg-related-item-icon-holder\"><a href=\"" . $related_item->getURL() . "\"><img src=\"". $icon_url . "\" class=\"elgg-related-item-icon elgg-related-" . $this_subtype . "-icon\"/ width=\"10\" height=\"20\"></a></div>";
 					echo $img;
 				}
-				$type_label = get_nice_name_for_subtype($this_subtype);
+				$type_label = elgg_echo('item:object:' . $this_subtype);
 
 								echo '<div class="elgg-related-item-title">';
 				if ($related_item->title) {
