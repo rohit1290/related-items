@@ -57,10 +57,12 @@ if (in_array($vars['entity']->getSubtype(), $renderto_subtypes)) {
 						case 'album':
 						{
 							$cover_guid = $related_item->getCoverImageGuid();
-							$album_cover = get_entity($cover_guid);
-							if ($album_cover->getSubtype() === 'image') {
+							if($cover_guid > 0) {
+								$album_cover = get_entity($cover_guid);
+								if ($album_cover->getSubtype() === 'image') {
 									$icon_url = $elgg_path . "photos/thumbnail/" . $cover_guid . "/small/";
 									break;
+								}
 							}
 						}
 						case 'bookmarks':
